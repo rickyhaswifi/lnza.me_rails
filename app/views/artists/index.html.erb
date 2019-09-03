@@ -1,0 +1,14 @@
+<div class="artist-index">
+<h1>Welcome Ricky, Artist One-Sheets Database</h1>
+
+<ul>
+<% @artists.each do |artist| %>
+<li> <%= link_to artist.performer, artist %> | <%= link_to 'Edit Artist', edit_artist_path(@artists) %>  | <%= link_to 'Remove sheet', @artist,  method: :delete %> </li>
+<% end %>
+</ul>
+
+<button class="btn btn-warning">
+<%= link_to 'Create new sheet', new_artist_path %>
+</button>
+
+</div>

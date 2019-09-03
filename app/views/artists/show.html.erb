@@ -1,0 +1,210 @@
+ <title>Lnza.me - <%= @artist.performer %></title>
+
+    <div class="container-fluid maxx">
+
+         <div class="mt-3 titleSec">
+           <h1>ONE-SHEET</h1>
+           <hr>
+         </div>
+
+         <!-- START 2 COLUMN -->
+          <div class="row">
+            <div class="col"></div>
+            <div class="col-sm-12 col-md-5 col-lg-5">
+              <div class="card" style="max-width: 20rem;">
+                <!-- <img src="" class="card-img-top" alt="..."> -->
+                <div class="card-body">
+                  <h5 class="card-title artistName"> <%= @artist.performer %> </h5>
+                  <p class="card-text lead"> <%= @artist.recordlabel %></p>
+                  <div class="albumFeature"> <%= image_tag(@artist.cover) %> </div>
+       
+                </div>
+                <!-- Facebook -->
+                <div class="oneSocial facebook">
+                 <div class="row">
+                   <div class="col-4">
+                      <i class="fab fa-facebook-f"></i>
+                   </div>
+                   <div class="col-8">
+                     <h2 class="socialText"> <%= @artist.facebook_num %> </h2>
+                   </div>
+                 </div>
+                  </div>
+
+                     <!-- Spotify -->
+                <div class="oneSocial spotify">
+                    <div class="row">
+                      <div class="col-4">
+                         <i class="fab fa-spotify"></i>
+                      </div>
+                      <div class="col-8">
+                        <h2 class="socialText"> <%= @artist.spotify_num %> </h2>
+                      </div>
+                    </div>
+                     </div>
+
+
+                     <!-- Youtube -->
+                <div class="oneSocial youtube">
+                    <div class="row">
+                      <div class="col-4">
+                         <i class="fab fa-youtube"></i>
+                      </div>
+                      <div class="col-8">
+                        <h2 class="socialText"> <%= @artist.youtube_num %> </h2>
+                      </div>
+                    </div>
+                     </div>
+
+                            <!-- instagram -->
+                <div class="oneSocial instagram">
+                    <div class="row">
+                      <div class="col-4">
+                         <i class="fab fa-instagram"></i>
+                      </div>
+                      <div class="col-8">
+                        <h2 class="socialText"> <%= @artist.instagram_num %> </h2>
+                      </div>
+                    </div>
+                     </div>
+
+                            <!-- twitter -->
+                <div class="oneSocial twitter">
+                    <div class="row">
+                      <div class="col-4">
+                         <i class="fab fa-twitter"></i>
+                      </div>
+                      <div class="col-8">
+                        <h2 class="socialText"> <%= @artist.twitter_num %> </h2>
+                      </div>
+                    </div>
+                     </div>
+             <!-- END SOCIAL -->
+             <div class="oneSocialInvert">
+              <a href="<%= @artist.dropbox_link %>" target="_blank">            
+                <button class="btn-download">
+                  <h2><i class="fab fa-dropbox dropboxIcon"></i> Descarga</h2>
+                </button>
+              </a>
+                 </div>
+         
+            
+              </div>
+          <!-- CARD END -->
+     </div> 
+            <!-- START COLUMN 2 -->
+            
+            <div class="col-sm-12 col-md-5 col-lg-5">
+                <div id="video" class="">
+                    <div id="video">
+                      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/<%= @artist.video_emb %>?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                    <hr>
+            <h1 class="bioSec">Biography</h1>
+            <p class="bio bioSec mb-3">
+                <%= @artist.biography %>
+            </p>
+          
+                    
+              <div id="waveform" class="mb-3"></div>
+              <div class="controls">
+                  <button class="btn btn-warning" data-action="play">
+                      <i class="far fa-play-circle"></i>
+                      Escuchar
+                      /
+                      <i class="far fa-pause-circle"></i>
+                      Parar
+                  </button>
+              </div>
+              <hr>
+              <p class="bioSec">CONTRATACIONES<br>
+                <i class="fas fa-mobile-alt"></i> <%= @artist.booking %>
+              </p>
+          
+            </div>
+            <div class="col"></div>
+            <!-- CLOSING 2 ROW DIV -->
+          </div>
+          <!-- START ONESHEET FOOTER -->
+    <div class="row oneFooter mt-3 mb-3">
+    <div class="col-1"></div>
+        <div class="col-2">
+        <a href="<%= @artist.spotify_link %>" target="_blank">
+        <i class="fab fa-spotify fa-fw"></i>
+        </a>
+        </div>
+        <div class="col-2">
+        <a href="<%= @artist.facebook_link %>" target="_blank">
+        <i class="fab fa-facebook-f fa-fw"></i>
+        </a>
+
+        </div>
+        <div class="col-2">
+        <a href="<%= @artist.instagram_link %>" target="_blank">
+        <i class="fab fa-instagram fa-fw"></i> 
+        </a>
+        </div>
+        <div class="col-2">
+        <a href="<%= @artist.twitter_link %>" target="_blank">
+        <i class="fab fa-twitter fa-fw"></i>
+        </a>
+        </div>
+        <div class="col-2">
+        <a href="<%= @artist.youtube_link %>" target="_blank">
+        <i class="fab fa-youtube fa-fw"></i> 
+        </a>
+        </div>
+    <div class="col-1"></div>
+    </div>
+    </div>
+
+<button type="button" class="btn" data-toggle="modal" data-target="#adminModal">
+.
+</button>   
+
+<!-- Modal -->
+<div class="modal fade" id="adminModal" tabindex="-1" role="dialog" aria-labelledby="adminModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="adminModalTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+         <%= link_to 'Edit Artist', edit_artist_path(@artist) %>  | <%= link_to 'Remove sheet', @artist,  method: :delete %> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/wavesurfer.js"></script>
+<script> 
+console.log('All for Jesus')
+
+var wavesurfer = WaveSurfer.create({
+    container: '#waveform',
+    waveColor: '#EEE9C3',
+    progressColor: 'gold'
+
+});
+
+wavesurfer.load('<%= @artist.audio %>');
+
+wavesurfer.on('ready', function () {
+    wavesurfer.pause(); 
+    wavesurfer.setVolume(0.5);
+    // wavesurfer.toggleMute();
+});
+
+document
+        .querySelector('[data-action="play"]')
+        .addEventListener('click', wavesurfer.playPause.bind(wavesurfer));
+</script>
+

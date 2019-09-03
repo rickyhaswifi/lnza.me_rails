@@ -1,0 +1,41 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  performer: MyString
+  recordlabel: MyString
+  cover: MyString
+  facebook_num: MyString
+  spotify_num: MyString
+  youtube_num: MyString
+  instagram_num: MyString
+  twitter_num: MyString
+  dropbox_link: MyString
+  video_emb: MyString
+  biography: MyText
+  audio: MyString
+  booking: MyString
+  spotify_link: MyString
+  facebook_link: MyString
+  instagram_link: MyString
+  twitter_link: MyString
+  youtube_link: MyString
+
+two:
+  performer: MyString
+  recordlabel: MyString
+  cover: MyString
+  facebook_num: MyString
+  spotify_num: MyString
+  youtube_num: MyString
+  instagram_num: MyString
+  twitter_num: MyString
+  dropbox_link: MyString
+  video_emb: MyString
+  biography: MyText
+  audio: MyString
+  booking: MyString
+  spotify_link: MyString
+  facebook_link: MyString
+  instagram_link: MyString
+  twitter_link: MyString
+  youtube_link: MyString

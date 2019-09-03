@@ -1,0 +1,105 @@
+<h1>Create a One-Sheet</h1>
+<h1> <%= @artist.id ? 'Edit Chart' : 'Create Chart'%> </h1>
+
+<%= form_for @artist do |f| %>
+<div>
+    <%= f.label :performer %>
+    <%= f.text_field :performer %>
+    </div> <br>
+
+<div>    
+    <%= f.label 'Record Label' %>
+    <%= f.text_field :recordlabel %>
+    </div> <br>
+
+<div>    
+    <%= f.label :cover %>
+    <%= f.file_field :cover %>
+    </div> <br>
+
+<div>    
+    <%= f.label :facebook_num %>
+    <%= f.text_field :facebook_num %>
+    </div> <br>
+
+<div>    
+    <%= f.label :spotify_num %>
+    <%= f.text_field :spotify_num %>
+    </div> <br>
+
+<div>    
+    <%= f.label :youtube_num %>
+    <%= f.text_field :youtube_num %>
+    </div> <br>
+
+ <div>   
+    <%= f.label :instagram_num %>
+    <%= f.text_field :instagram_num %>
+    </div> <br>
+
+ <div>   
+    <%= f.label :twitter_num %>
+    <%= f.text_field :twitter_num %>
+    </div> <br>
+
+ <div>   
+    <%= f.label :dropbox_link %>
+    <%= f.text_field :dropbox_link %>
+    </div> <br>
+
+ <div>   
+    <%= f.label 'Youtube Video ID' %>
+    <%= f.text_field :video_emb %>
+    </div> <br>
+
+  <div>  
+    <%= f.label :biography %>
+    <%= f.text_area :biography %>
+    </div> <br>
+
+ <div>   
+    <%= f.label :audio %>
+    <%= f.text_field :audio %>
+    </div> <br>
+    
+ <div>   
+    <%= f.label :booking %>
+    <%= f.text_field :booking %>
+    </div> <br>
+
+<div>
+    <%= f.label :spotify_link %>
+    <%= f.text_field :spotify_link %>
+    </div> <br>
+
+<div>
+    <%= f.label :facebook_link %>
+    <%= f.text_field :facebook_link %>
+    </div> <br>
+
+<div>
+    <%= f.label :instagram_link %>
+    <%= f.text_field :instagram_link %>
+    </div> <br>
+
+<div>
+    <%= f.label :twitter_link %>
+    <%= f.text_field :twitter_link %>
+    </div> <br>
+
+<div>
+    <%= f.label :youtube_link %>
+    <%= f.text_field :youtube_link %>
+    </div> <br>
+
+<div>
+    <%= f.submit%>
+    </div>
+<% end%>
+
+
+<hr>
+
+<button>
+<%= link_to 'Cancel', root_path%>
+</button>
