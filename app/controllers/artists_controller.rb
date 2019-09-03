@@ -45,11 +45,12 @@ class ArtistsController < ApplicationController
     private
       def artist_params
         params.require(:artist).permit(:attr, :performer, :recordlabel, :cover, :facebook_num, :spotify_num, :youtube_num, :instagram_num, 
-        :twitter_num, :dropbox_link, :video_emb, :biography, :audio, :booking, :spotify_link, :facebook_link, :instagram_link, :twitter_link, :youtube_link)
+        :twitter_num, :dropbox_link, :video_emb, :biography, :audio, :booking, :spotify_link, :facebook_link, :instagram_link, :twitter_link, :youtube_link, :one_link)
       end
 
       def set_artist
-        @artist = Artist.find(params[:id])
+        # @artist = Artist.find(params[:id])
+        @artist = Artist.friendly.find(params[:id])
       end
 
 end

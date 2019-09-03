@@ -3,7 +3,7 @@
 
 <ul>
 <% @artists.each do |artist| %>
-<li> <%= link_to artist.performer, artist %> | <%= link_to 'Edit Artist', edit_artist_path(@artists) %>  | <%= link_to 'Remove sheet', @artist,  method: :delete %> </li>
+<li> <%= link_to artist.performer, artist %></li>
 <% end %>
 </ul>
 
